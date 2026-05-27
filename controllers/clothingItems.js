@@ -30,9 +30,9 @@ module.exports.createClothingItem = (req, res) => {
 };
 
 module.exports.deleteClothingItem = (req, res) => {
-  const { itemId } = req.params;
+  const { id } = req.params;
 
-  ClothingItem.findByIdAndDelete(itemId)
+  ClothingItem.findByIdAndDelete(id)
     .orFail()
     .then(() => res.send({ message: "Item deleted" }))
     .catch((err) => {
