@@ -2,6 +2,8 @@
 
 REST API for the WTWR app — handles users, auth, and clothing items. Built with Express and MongoDB.
 
+Live domain: https://wtwr.hosts.name
+
 Frontend repo: https://github.com/jasssingh191/se_project_react
 
 ## What it does

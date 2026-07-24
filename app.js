@@ -18,6 +18,12 @@ app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
 
+app.get("/crash-test", () => {
+  setTimeout(() => {
+    throw new Error("Server will crash now");
+  }, 0);
+});
+
 app.post("/signin", validateLogin, login);
 app.post("/signup", validateUserBody, createUser);
 app.get("/items", getClothingItems);
